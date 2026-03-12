@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>授業履歴画面</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#197fe6",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<button class="text-slate-800 dark:text-slate-200 flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">授業履歴</h2>
+</div>
+<main class="flex flex-col w-full grow px-4 sm:px-6 py-6">
+<div class="flex-1 space-y-5">
+<div class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 w-full max-w-lg mx-auto flex items-center gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 shrink-0" data-alt="Portrait of Kei Tanaka" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSPe70z9_9ueX2PuNs1cWFocrPINaTjjdjDAB9vcehyArDNgnK9pwdZyTV0NUEUPhReObMZkuBzP5G1RI35aIOxF5gH6yf5icfqu5ZovmZ67A5XdTULp-17YWH8TqoFXQ5ZXNvGdf7kZVhBXIExfWeIBMmtJ2o4gb_Er1DFiHkR1oZ9ErXPy5bDFCDhLU9_u_ftViDC15vNmncBDdQaGQaojUXCbm8Uz5TbcvzVLmik-pGeV5RKun0YgFVSYYJygayXsbitCTT4A");'></div>
+<div class="flex-grow">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">2023年10月28日 (土) 15:00</p>
+<p class="text-slate-900 dark:text-slate-50 text-base font-semibold leading-normal mt-0.5">田中 圭 先生</p>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-normal leading-normal line-clamp-1">英会話初級レッスン</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-2xl">chevron_right</span>
+</div>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 w-full max-w-lg mx-auto flex items-center gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 shrink-0" data-alt="Portrait of Yui Aragaki" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBu1wOhc3GCjQWWRMI-J8hOH4oDOHSzMm8oOeZTqlxVZphbga2VHiBsVjZSXIhFif4HZRNkHdyvUNbORNjZxlKte5o-flgFrZp50EJFnj1u2_k3CSes5b-2xY-gzL_mpFpkc0U02MeBrmTpowGEN9dVNJdqkDv9VyRAcoCDOjQ0HYRSf7n1uRYxvpwn8gO5_pMiE7mDf7hKm7SsRJO7VjmrPrTaPOcdqFVdqdIFVLppBRyPEUqhGMF4xuyWqPi-h8RM_9FKbxEEmQ");'></div>
+<div class="flex-grow">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">2023年10月21日 (土) 11:00</p>
+<p class="text-slate-900 dark:text-slate-50 text-base font-semibold leading-normal mt-0.5">新垣 結衣 先生</p>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-normal leading-normal line-clamp-1">ビジネス数学基礎</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-2xl">chevron_right</span>
+</div>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 w-full max-w-lg mx-auto flex items-center gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors opacity-70">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 shrink-0" data-alt="Portrait of Kento Yamazaki" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8hlCcxXUEoiUA9NvK49cdfGY3VV4oSIraNA8d26OPLBrRWw3hXLuDv6QebMhGS6cTr_1ENblWBmVPAmQTv6fYc8Yx6FY30ksjT3U5w1r2m8HkjAY1qh1CYA4TnE0BFH3hOvbGvc9md2P5oRdGy2fz1guaNSYanPIxcEd5J6gebCm-AcbvjNH8eqVTpL8AVgus6ovHKxAFMJX88CR8n68kdHmTt9M01M_c57ZkDBO35blsaHbh1pF1Our_kTGqtOK-97G0ReVwiw");'></div>
+<div class="flex-grow">
+<div class="flex items-center gap-2">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal leading-normal">2023年9月15日 (金) 19:00</p>
+<span class="text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/50 text-xs font-medium px-2 py-0.5 rounded-full">完了</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base font-semibold leading-normal mt-0.5">山崎 賢人 先生</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal line-clamp-1">ギター入門</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-2xl">chevron_right</span>
+</div>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl shadow-sm p-4 w-full max-w-lg mx-auto flex items-center gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors opacity-70">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 shrink-0" data-alt="Portrait of Kasumi Arimura" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4fwezvXKO48uefnxJTEZAO2zoowA32y3e2nDBkanY4gmWN0YyeMqQEYuBwy4HyHzHos0UWpHvGQLGv0FIEsYKw3LdDC10VpZ84LMxbRgW3jvvO_P9tsdDrXaokr3r-YUHyx5_Yjo3gusymZ0O8SO49SOWJgPOSbN6lwa-yJdT9cxh4K1pMXFK_EDnao3GuAi3NWNcI1yz-4-pDfgfmAkZLu2xic7ioBt5rBM6whuVtYsNq5_7AzZEW6NhTOm4eB-w2PP5woVv0A");'></div>
+<div class="flex-grow">
+<div class="flex items-center gap-2">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal leading-normal">2023年8月30日 (水) 20:00</p>
+<span class="text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/50 text-xs font-medium px-2 py-0.5 rounded-full">完了</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base font-semibold leading-normal mt-0.5">有村 架純 先生</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal line-clamp-1">日常で使える写真撮影テクニック</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-2xl">chevron_right</span>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

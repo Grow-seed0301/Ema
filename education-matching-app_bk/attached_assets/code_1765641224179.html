@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>レビュー投稿画面</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#308ce8",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<button class="text-gray-800 dark:text-gray-200 flex size-12 shrink-0 items-center justify-center -ml-4">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">レビューを投稿する</h2>
+<div class="w-8"></div>
+</div>
+<div class="flex flex-col flex-1 p-4 space-y-6">
+<!-- Teacher Info List Item -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of teacher Tanaka Kei" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACfUEoqpMto0Fk3qoOxTb-Lt_8lofACkTEqNrX2i9cIYPZiBiD6tgXUbnqMC_b89mgTz-P4xxH7hXjyPqxDx4IG-xxII49sJx8sUbCIWARISk-0lAL8CB3g-BGq99BbdJpkPLlTI3d617p-ov8Aa4ndVaBDLJ3vsBBooLnh7EympWKbxN36phwTcqOJ-tQXpmE4I1-f-SD2PbUdHLc_k-C1SUMwOniEC8huvRngieoctTwrhQEyy04ZpWoR_cbaZ9khNUvIC1q-g");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-gray-100 text-base font-medium leading-normal line-clamp-1">田中 圭</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">はじめてのビジネス英会話</p>
+</div>
+</div>
+<!-- Rating Section -->
+<div class="flex flex-col space-y-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+<h3 class="text-gray-900 dark:text-gray-100 text-base font-bold leading-tight tracking-[-0.015em]">教師の評価</h3>
+<div class="flex items-center justify-center space-x-2">
+<button class="text-[#F5A623]"><span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="text-[#F5A623]"><span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="text-[#F5A623]"><span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="text-[#F5A623]"><span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="text-gray-300 dark:text-gray-600"><span class="material-symbols-outlined !text-4xl">star</span></button>
+</div>
+</div>
+<!-- Comment Text Field -->
+<div class="flex max-w-full flex-wrap items-end gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+<label class="flex flex-col w-full">
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal pb-2">コメント</p>
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 min-h-36 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="レッスンの感想をご自由にお書きください"></textarea>
+</label>
+</div>
+<!-- Anonymous Toggle -->
+<div class="flex items-center justify-between bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+<label class="text-gray-900 dark:text-gray-100 text-base font-medium" for="anonymous-toggle">匿名で投稿する</label>
+<button aria-checked="false" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 dark:bg-gray-700 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" id="anonymous-toggle" role="switch" type="button">
+<span class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</div>
+<!-- Spacer to push button to bottom -->
+<div class="flex-grow"></div>
+<!-- CTA Button -->
+<div class="bg-background-light dark:bg-background-dark p-4 sticky bottom-0">
+<button class="w-full bg-primary text-white font-bold py-4 px-4 rounded-xl shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-colors duration-200">
+            投稿する
+        </button>
+</div>
+</div>
+</body></html>

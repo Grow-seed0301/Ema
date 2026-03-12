@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Teacher Experience Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 justify-between backdrop-blur-sm">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200">arrow_back</span>
+</div>
+<h2 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-gray-100">指導経験</h2>
+<div class="w-10"></div>
+</div>
+<!-- Profile Header -->
+<div class="p-4 @container">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex items-center gap-4">
+<div class="aspect-square w-24 min-w-24 rounded-full bg-cover bg-center bg-no-repeat" data-alt="Portrait of a female teacher" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDd0hnkrA2TVw7epudL3GoK0jLPwBJvm4M6N9FcnSHSV3gtgM4Cyg8doLxL8V1FqYpOPpAfVvkKiWMDgb5IxJ9YYqCFUELOG208Av50Ag6Z5KBTmjDfiu0m9be4HAsCequggFInw0yeDLRPZHddpVY7GeRs-EonWikobxZHsfqDY5WhE2SAP376FmzIDLFD7BGaTGPChkNnvLsyoQweM-6aknrq75Td2C-nEWDktKnsgIWTOXxhuI7lSQjcMhLTCzV4Uqak1QXo44M');"></div>
+<div class="flex flex-col justify-center">
+<p class="text-[22px] font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-gray-100">田中 圭</p>
+<p class="text-base font-normal leading-normal text-gray-500 dark:text-gray-400">数学専門</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-2 gap-4 px-4">
+<div class="flex flex-1 flex-col gap-2 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800/50">
+<p class="text-base font-medium leading-normal text-gray-600 dark:text-gray-300">指導年数</p>
+<p class="text-3xl font-bold leading-tight tracking-tight text-primary">10<span class="ml-1 text-base font-medium text-gray-800 dark:text-gray-200">年</span></p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800/50">
+<p class="text-base font-medium leading-normal text-gray-600 dark:text-gray-300">合格実績</p>
+<p class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-gray-100">25<span class="ml-1 text-base font-medium text-gray-800 dark:text-gray-200">名</span></p>
+</div>
+</div>
+<!-- Section: Achievements -->
+<h3 class="px-4 pb-2 pt-6 text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-gray-100">実績・資格</h3>
+<div class="flex flex-col gap-2 px-4">
+<div class="flex min-h-14 items-center gap-4 rounded-lg bg-white p-3 dark:bg-gray-800/50">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal text-gray-800 dark:text-gray-200">東京大学 合格実績</p>
+</div>
+<div class="flex min-h-14 items-center gap-4 rounded-lg bg-white p-3 dark:bg-gray-800/50">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal text-gray-800 dark:text-gray-200">高等学校教諭一種免許状（数学）</p>
+</div>
+<div class="flex min-h-14 items-center gap-4 rounded-lg bg-white p-3 dark:bg-gray-800/50">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal text-gray-800 dark:text-gray-200">担当生徒の平均偏差値15UP</p>
+</div>
+</div>
+<!-- Section: Teaching Style -->
+<h3 class="px-4 pb-2 pt-6 text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-gray-100">指導スタイル</h3>
+<div class="flex flex-wrap gap-2 px-4">
+<div class="rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5">
+<p class="text-sm font-medium text-primary">個別最適化</p>
+</div>
+<div class="rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5">
+<p class="text-sm font-medium text-primary">対話型</p>
+</div>
+<div class="rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5">
+<p class="text-sm font-medium text-primary">基礎重視</p>
+</div>
+<div class="rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5">
+<p class="text-sm font-medium text-primary">応用力育成</p>
+</div>
+</div>
+<!-- Section: Subjects -->
+<h3 class="px-4 pb-2 pt-6 text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-gray-100">指導可能な科目</h3>
+<div class="space-y-2 px-4 pb-8">
+<details class="group rounded-lg bg-white dark:bg-gray-800/50">
+<summary class="flex cursor-pointer list-none items-center justify-between p-4">
+<span class="text-base font-medium text-gray-800 dark:text-gray-200">中学生</span>
+<span class="transition-transform duration-300 group-open:rotate-180">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">expand_more</span>
+</span>
+</summary>
+<div class="border-t border-gray-200 px-4 pb-4 pt-2 dark:border-gray-700">
+<ul class="list-disc space-y-1 pl-5 text-gray-600 dark:text-gray-300">
+<li>数学Ⅰ・A</li>
+<li>数学Ⅱ・B</li>
+</ul>
+</div>
+</details>
+<details class="group rounded-lg bg-white dark:bg-gray-800/50">
+<summary class="flex cursor-pointer list-none items-center justify-between p-4">
+<span class="text-base font-medium text-gray-800 dark:text-gray-200">高校生</span>
+<span class="transition-transform duration-300 group-open:rotate-180">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">expand_more</span>
+</span>
+</summary>
+<div class="border-t border-gray-200 px-4 pb-4 pt-2 dark:border-gray-700">
+<ul class="list-disc space-y-1 pl-5 text-gray-600 dark:text-gray-300">
+<li>数学Ⅰ</li>
+<li>数学A</li>
+<li>数学Ⅱ</li>
+<li>数学B</li>
+<li>数学Ⅲ</li>
+<li>数学C</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</body></html>

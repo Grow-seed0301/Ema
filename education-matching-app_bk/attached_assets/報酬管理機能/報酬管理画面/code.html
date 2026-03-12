@@ -1,0 +1,136 @@
+<html class="light" lang="ja"><head><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">```html
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>報酬管理画面</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006b70",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Manrope', sans-serif;
+            min-height: 100dvh;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chart-bar {
+            @apply bg-slate-200 dark:bg-slate-700 rounded-t-sm transition-all duration-300;
+        }
+        .chart-bar-active {
+            @apply bg-primary rounded-t-sm;
+        }
+    </style>
+
+
+<header class="sticky top-0 z-30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-800/60">
+<div class="flex items-center px-4 py-3">
+<div class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">arrow_back_ios_new</span>
+</div>
+<h1 class="text-lg font-bold flex-1 text-center pr-10 text-slate-900 dark:text-slate-100">報酬管理</h1>
+</div>
+</header>
+<main class="pb-32">
+<section class="p-4">
+<div class="relative overflow-hidden rounded-3xl bg-primary p-8 shadow-2xl shadow-primary/20">
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white/90 text-[11px] font-bold uppercase tracking-wider mb-4">
+                    Available Balance
+                </span>
+<p class="text-white/80 text-sm font-medium">出金可能額</p>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-white text-4xl font-extrabold tracking-tight">¥125,000</span>
+</div>
+<div class="mt-6 flex items-center gap-2 text-white/60 text-[11px] bg-black/10 px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-sm">info</span>
+<span>振込申請は月1回まで可能です</span>
+</div>
+</div>
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -left-12 -bottom-12 w-48 h-48 bg-black/10 rounded-full blur-3xl"></div>
+</div>
+</section>
+<section class="px-4 py-2">
+<div class="bg-white dark:bg-slate-900/50 rounded-2xl p-6 border border-slate-200/50 dark:border-slate-800/50 shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">月ごとの収益推移</h3>
+<p class="text-slate-900 dark:text-white text-xl font-extrabold mt-1">¥42,500 <span class="text-xs font-medium text-slate-400">今月の予測</span></p>
+</div>
+<span class="material-symbols-outlined text-slate-300">insights</span>
+</div>
+<div class="flex items-end justify-between h-32 gap-3 px-1">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full chart-bar" style="height: 45%;"></div>
+<span class="text-[10px] font-bold text-slate-400">5月</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full chart-bar" style="height: 70%;"></div>
+<span class="text-[10px] font-bold text-slate-400">6月</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full chart-bar" style="height: 55%;"></div>
+<span class="text-[10px] font-bold text-slate-400">7月</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full chart-bar" style="height: 35%;"></div>
+<span class="text-[10px] font-bold text-slate-400">8月</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full chart-bar" style="height: 85%;"></div>
+<span class="text-[10px] font-bold text-slate-400">9月</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full chart-bar-active" style="height: 100%;"></div>
+<span class="text-[10px] font-bold text-primary">10月</span>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 mt-8 flex justify-center">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-bold text-sm py-2 px-4 rounded-full transition-colors" href="#">
+            報酬履歴確認
+            <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-4 pb-10 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent z-40">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-2xl shadow-xl shadow-primary/30 flex items-center justify-center gap-2 transition-all active:scale-[0.97]">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+        振込申請をする
+    </button>
+</div>
+
+```</body></html>

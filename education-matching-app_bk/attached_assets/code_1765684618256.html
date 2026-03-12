@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ランク制度 - 教師用ダッシュボード</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    background: "#0f172a",
+                    surface: "#1e293b",
+                },
+                fontFamily: {
+                    "display": ["Inter", "Noto Sans JP", "sans-serif"]
+                },
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-slate-950 text-slate-50 antialiased selection:bg-indigo-500/30">
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4">
+<div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"></div>
+<div class="relative w-full max-w-md h-[92vh] sm:h-[85vh] bg-slate-900 sm:rounded-3xl rounded-t-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-800">
+<div class="flex flex-col items-center pt-6 pb-4 px-6 bg-slate-900/95 sticky top-0 z-20 shrink-0 border-b border-slate-800">
+<div class="w-12 h-1.5 bg-slate-700 rounded-full mb-5 sm:hidden"></div>
+<h2 class="text-xl font-bold text-white tracking-wide">ランク制度</h2>
+<p class="text-xs text-slate-400 mt-1 font-medium">現在のランクと次の目標を確認しましょう</p>
+</div>
+<div class="flex-1 overflow-y-auto p-5 space-y-5 no-scrollbar bg-slate-900">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#2e241f] to-[#1c1614] border border-[#5d4638]/50 p-1">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-9xl text-[#cd7f32]">military_tech</span>
+</div>
+<div class="relative p-5 z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-[#4a3b32] flex items-center justify-center shadow-lg border border-[#755948]/30">
+<span class="material-symbols-outlined text-[#cd7f32] text-xl">military_tech</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-[#e8bfa0]">ブロンズ</h3>
+<p class="text-xs text-[#a88d7d]">生徒数目安: 1-2人</p>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold text-[#8c7060] uppercase tracking-wider mb-2">特典</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-[#d6c0b3]">
+<span class="material-symbols-outlined text-[#cd7f32] text-base shrink-0 mt-0.5">check_circle</span>
+<span>基本機能の利用</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#27303f] to-[#181f29] border border-[#475569]/50 p-1">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-9xl text-slate-400">military_tech</span>
+</div>
+<div class="relative p-5 z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-slate-700/50 flex items-center justify-center shadow-lg border border-slate-500/30">
+<span class="material-symbols-outlined text-slate-300 text-xl">military_tech</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-200">シルバー</h3>
+<p class="text-xs text-slate-400">生徒数目安: 3-5人</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700/50">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">昇格条件</p>
+<ul class="space-y-1.5">
+<li class="flex items-center gap-2 text-xs text-slate-300">
+<span class="w-1 h-1 rounded-full bg-slate-500"></span>
+<span>平均評価 3.0以上</span>
+</li>
+<li class="flex items-center gap-2 text-xs text-slate-300">
+<span class="w-1 h-1 rounded-full bg-slate-500"></span>
+<span>登録料: ¥3,000</span>
+</li>
+</ul>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">特典</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-slate-300">
+<span class="material-symbols-outlined text-slate-400 text-base shrink-0 mt-0.5">check_circle</span>
+<span>シルバーバッジ表示</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-slate-300">
+<span class="material-symbols-outlined text-slate-400 text-base shrink-0 mt-0.5">check_circle</span>
+<span>マッチング <span class="text-white font-bold">1.2倍</span> 優先</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-slate-300">
+<span class="material-symbols-outlined text-slate-400 text-base shrink-0 mt-0.5">check_circle</span>
+<span>週次レポート配信</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#382b0f] to-[#211806] border border-[#d97706]/40 p-1 shadow-[0_0_20px_-10px_rgba(217,119,6,0.3)]">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl text-amber-500">trophy</span>
+</div>
+<div class="relative p-5 z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-amber-900/50 flex items-center justify-center shadow-lg border border-amber-500/30">
+<span class="material-symbols-outlined text-amber-400 text-xl">trophy</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-amber-300">ゴールド</h3>
+<p class="text-xs text-amber-500/80">生徒数目安: 6-9人</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-amber-950/40 rounded-lg p-3 border border-amber-800/30">
+<p class="text-[10px] font-bold text-amber-700 uppercase tracking-wider mb-2">昇格条件</p>
+<ul class="space-y-1.5">
+<li class="flex items-center gap-2 text-xs text-amber-200/80">
+<span class="w-1 h-1 rounded-full bg-amber-600"></span>
+<span>平均評価 4.0以上</span>
+</li>
+<li class="flex items-center gap-2 text-xs text-amber-200/80">
+<span class="w-1 h-1 rounded-full bg-amber-600"></span>
+<span>登録料: ¥1,000</span>
+</li>
+</ul>
+</div>
+<div>
+<p class="text-[10px] font-bold text-amber-700 uppercase tracking-wider mb-2">特典</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-amber-100">
+<span class="material-symbols-outlined text-amber-500 text-base shrink-0 mt-0.5">check_circle</span>
+<span>ゴールドバッジ + <span class="text-amber-300 font-bold">「人気教師」</span>タグ</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-amber-100">
+<span class="material-symbols-outlined text-amber-500 text-base shrink-0 mt-0.5">check_circle</span>
+<span>マッチング <span class="text-amber-300 font-bold">1.5倍</span> 優先</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-amber-100">
+<span class="material-symbols-outlined text-amber-500 text-base shrink-0 mt-0.5">check_circle</span>
+<span>詳細分析レポート</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-amber-100">
+<span class="material-symbols-outlined text-amber-500 text-base shrink-0 mt-0.5">shield</span>
+<span>キャンセル時50%保証 / メール12h対応</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e1b4b] to-[#100e2e] border border-indigo-500/40 p-1 shadow-[0_0_25px_-5px_rgba(99,102,241,0.25)] ring-1 ring-indigo-500/20">
+<div class="absolute -inset-[100%] bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 pointer-events-none"></div>
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl text-indigo-400">diamond</span>
+</div>
+<div class="relative p-5 z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-indigo-900/50 flex items-center justify-center shadow-lg border border-indigo-400/30">
+<span class="material-symbols-outlined text-indigo-300 text-xl">diamond</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-indigo-200">プラチナ</h3>
+<p class="text-xs text-indigo-400">生徒数目安: 10人以上</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-indigo-950/50 rounded-lg p-3 border border-indigo-800/30">
+<p class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider mb-2">昇格条件</p>
+<ul class="space-y-1.5">
+<li class="flex items-center gap-2 text-xs text-indigo-200/80">
+<span class="w-1 h-1 rounded-full bg-indigo-500"></span>
+<span>平均評価 4.5以上</span>
+</li>
+<li class="flex items-center gap-2 text-xs text-indigo-200/80">
+<span class="w-1 h-1 rounded-full bg-indigo-500"></span>
+<span class="text-indigo-300 font-bold">登録料完全無料</span>
+</li>
+</ul>
+</div>
+<div>
+<p class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider mb-2">特典</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-indigo-100">
+<span class="material-symbols-outlined text-indigo-400 text-base shrink-0 mt-0.5">verified</span>
+<span>プラチナバッジ + <span class="text-indigo-300 font-bold">「トップ教師」</span>タグ</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-indigo-100">
+<span class="material-symbols-outlined text-indigo-400 text-base shrink-0 mt-0.5">rocket_launch</span>
+<span>マッチング <span class="text-indigo-300 font-bold">最優先（2倍）</span></span>
+</li>
+<li class="flex items-start gap-2 text-sm text-indigo-100">
+<span class="material-symbols-outlined text-indigo-400 text-base shrink-0 mt-0.5">monitoring</span>
+<span>リアルタイムダッシュボード</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-indigo-100">
+<span class="material-symbols-outlined text-indigo-400 text-base shrink-0 mt-0.5">shield_lock</span>
+<span>キャンセル時80%保証 / メール6h対応</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h-8"></div>
+</div>
+<div class="p-4 bg-slate-900 border-t border-slate-800 z-20">
+<button class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-900/20 text-sm tracking-wide">
+                閉じる
+            </button>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="relative flex min-h-screen w-full flex-col bg-background-dark overflow-hidden blur-[4px] opacity-60 pointer-events-none">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBC2fbo6GJCGxA-RGupJBUBFOItWOs7yPHxuMKHRyFB3fldFWk8FtKMSMA-W3p3rm7C7cyeNKywgXLd423eRvpR3jlGk3Wk4lNsuovvrb-uJ2x7ivGBgW1nd7hbx7ezP50SRmFSCr4rG2IEWtfq5lnK40Sux53_SHeVuWmvM-YCGNMYlSVKh1ie5dnJBgwd-GeaCm_vet5j-ZmJdi2ZdMZNY6iOfQoOMG2itjeWjGsifVvNZY1BHxwl9a_Rt37BD91lZeUP6IqcCw");'></div>
+</div>
+<h2 class="text-slate-50 text-lg font-bold">マイページ</h2>
+<div class="w-12"></div>
+</div>
+<div class="px-4 py-6">
+<div class="bg-slate-800 rounded-xl p-4 flex items-center justify-between mb-4">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-slate-400">person</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-lg">dinhloc1991</h3>
+<p class="text-slate-400 text-sm">プロフィールを編集</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="bg-slate-800 rounded-xl p-4 flex items-center justify-between mb-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 text-xl">settings</span>
+<span class="text-slate-200">設定</span>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

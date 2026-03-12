@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>プロフィール編集</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": {
+              DEFAULT: "#4338CA", // Indigo 700
+              light: "#EEF2FF", // Indigo 50
+              dark: "#3730A3", // Indigo 800
+            },
+            "background-light": "#F9FAFB", // Gray 50
+            "background-dark": "#111827", // Gray 900
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1F2937", // Gray 800
+            "text-primary-light": "#1F2937", // Gray 800
+            "text-primary-dark": "#F9FAFB", // Gray 50
+            "text-secondary-light": "#6B7280", // Gray 500
+            "text-secondary-dark": "#9CA3AF", // Gray 400
+            "border-light": "#E5E7EB", // Gray 200
+            "border-dark": "#374151", // Gray 700
+          },
+          fontFamily: {
+            "display": ["Noto Sans JP", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      min-height: 100dvh;
+      background-color: #F9FAFB;
+    }
+    .dark body {
+      background-color: #111827;
+    }
+    input:focus, textarea:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 flex h-16 items-center border-b border-border-light bg-background-light/80 px-4 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-text-secondary-light transition-colors hover:bg-black/5 dark:text-text-secondary-dark dark:hover:bg-white/5">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold tracking-tight">プロフィール編集</h1>
+<div class="size-10 shrink-0"></div>
+</header>
+<main class="flex-1 px-6 py-8">
+<div class="mx-auto max-w-lg space-y-8">
+<div class="flex flex-col items-center gap-4">
+<div class="relative">
+<img alt="Student profile picture" class="h-28 w-28 rounded-full object-cover ring-4 ring-white dark:ring-surface-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUDSGvmulfFlZ3Cw4Ig8XDMOWRHIodyjT_LwfkKJ1i_vK4rJ4jgs17GBmwH4PyUkgkdJaOnuAfpXWssztcAFjOsoPAlm53_o_KVRFy47RDoZFdxK2Kc9VSQ96KURpZyuroXjUOlusGb11MX9B4FGDVPAzC3YkiLqxgDRNZ57h4-aVYH5lyAJH0ciaYjXGZOflP8c-LtuipURwn8azbr712qDwllE9H-vA_74KeL5WmUDQNcOlZQFN0hb6KkUNmq0HWQy2-IqfRBdg"/>
+<button class="absolute bottom-0 right-0 flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-primary text-white transition-transform duration-200 ease-in-out hover:scale-110 dark:border-surface-dark">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+</div>
+<p class="text-lg font-bold">山田 花子</p>
+</div>
+<div class="space-y-6">
+<div>
+<label class="mb-2 block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark" for="name">名前</label>
+<input class="w-full rounded-lg border-border-light bg-surface-light p-4 text-base placeholder:text-text-secondary-light focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary" id="name" type="text" value="山田 花子"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark" for="nickname">ニックネーム</label>
+<input class="w-full rounded-lg border-border-light bg-surface-light p-4 text-base placeholder:text-text-secondary-light focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary" id="nickname" type="text" value="ハナ"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark" for="birthdate">生年月日</label>
+<div class="relative">
+<input class="w-full rounded-lg border-border-light bg-surface-light p-4 pr-12 text-base placeholder:text-text-secondary-light focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary" id="birthdate" type="text" value="2008年4月1日"/>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary-light dark:text-text-secondary-dark">calendar_month</span>
+</div>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark" for="bio">自己紹介</label>
+<textarea class="w-full resize-none rounded-lg border-border-light bg-surface-light p-4 text-base placeholder:text-text-secondary-light focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary" id="bio" rows="5">こんにちは！都内の高校に通っている山田花子です。数学と物理が得意ですが、英語が苦手なので、優しく教えてくれる先生を探しています。趣味はピアノと読書です。よろしくお願いします！</textarea>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light p-6 dark:bg-background-dark">
+<button class="w-full rounded-full bg-primary py-4 text-base font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-4 focus:ring-primary/30 active:bg-primary-dark/90 dark:bg-primary dark:hover:bg-indigo-600 dark:focus:ring-indigo-500/40">
+        変更を保存する
+      </button>
+</footer>
+</div>
+
+</body></html>

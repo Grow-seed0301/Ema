@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ログイン</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen flex-col items-center justify-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden p-4">
+<div class="w-full max-w-md space-y-8">
+<div class="flex w-full flex-col items-center justify-center">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<h1 class="mt-6 text-center text-3xl font-bold tracking-tight text-[#0d141b] dark:text-white">ログイン</h1>
+<p class="mt-2 text-center text-sm text-[#4c739a] dark:text-slate-400">アカウントにアクセスしましょう</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col">
+<label class="mb-2 text-sm font-medium text-[#0d141b] dark:text-slate-300" for="email">メールアドレス</label>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400">mail</span>
+<input class="form-input h-14 w-full flex-1 rounded-lg border border-[#cfdbe7] bg-white p-3.5 pl-12 text-base text-[#0d141b] placeholder:text-[#4c739a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-slate-600 dark:bg-background-dark dark:text-white dark:placeholder-slate-400" id="email" placeholder="メールアドレスを入力" type="email" value=""/>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="mb-2 text-sm font-medium text-[#0d141b] dark:text-slate-300" for="password">パスワード</label>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400">lock</span>
+<input class="form-input h-14 w-full flex-1 rounded-lg border border-[#cfdbe7] bg-white p-3.5 pl-12 pr-12 text-base text-[#0d141b] placeholder:text-[#4c739a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-slate-600 dark:bg-background-dark dark:text-white dark:placeholder-slate-400" id="password" placeholder="パスワードを入力" type="password" value=""/>
+<button class="absolute right-4 text-[#4c739a] dark:text-slate-400" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<a class="text-sm font-medium text-primary hover:underline" href="#">パスワードをお忘れの場合</a>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex h-14 w-full items-center justify-center rounded-lg bg-primary px-4 py-2 text-base font-semibold text-white transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+                    ログイン
+                </button>
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-slate-300 dark:border-slate-600"></div>
+<span class="mx-4 flex-shrink text-sm text-[#4c739a] dark:text-slate-400">または</span>
+<div class="flex-grow border-t border-slate-300 dark:border-slate-600"></div>
+</div>
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+<button class="flex h-14 w-full items-center justify-center gap-3 rounded-lg border border-[#cfdbe7] bg-white px-4 py-2 text-sm font-medium text-[#0d141b] transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:focus:ring-offset-background-dark">
+<img alt="Google logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDcDkulZHYNx2ixiVng7v7dPw1k1wQCherBHL2M3GLctPTI1Uli2SG2VS_3s5wxtQ5pFztz7FM5rEMzsnRErp3C05u-BjsVYxOSDlify5--VCP-ljIRnEEbAsY-xWsJXPW31aRZ-s6CtPr-whO37BEULyINP2uQlfZ-MAbUrw6WuMZhG77hFdtiHAK7fFe6paNJljWEiQHN7pbhpr87k8UEusKo_Ud-sKAB_DbETeJxD1kz0NJBSPvxmjlrJR2tC20U25Xwg_ovgY"/>
+<span>Googleでログイン</span>
+</button>
+<button class="flex h-14 w-full items-center justify-center gap-3 rounded-lg border border-[#cfdbe7] bg-white px-4 py-2 text-sm font-medium text-[#0d141b] transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:focus:ring-offset-background-dark">
+<img alt="Apple logo" class="h-6 w-6 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_oFR_MEU-LNqWhGRlyfq0B79oK_OOj2dYEzbhSS7ZtSXyP25eohJIAvd7H-oaOrdjexXN1aYGKKsrAN86Se9XCk3r2N6DqSEPLCA8UmfWx3WbcgCRIsWjbPSONWZViMkAhzF6IwkYlBVm7PO0V7yY6-27cmZms9NRlA0QU-gV-P5z4UA691wpjxftLf5SgOSGeSscK_OO509TKUPzExqFk6Rqwf9iItfKkh2KgnmZ0DB1FWnmCdZ_ixnWkKNaNlit-AOi7_vnmxw"/>
+<span>Appleでサインイン</span>
+</button>
+</div>
+</div>
+<p class="text-center text-sm text-[#4c739a] dark:text-slate-400">
+                アカウントをお持ちでないですか？
+                <a class="font-semibold text-primary hover:underline" href="#">新規登録</a>
+</p>
+</div>
+</div>
+</body></html>

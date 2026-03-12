@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>生徒詳細画面</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans JP", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans JP', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button class="text-[#111418] dark:text-white flex items-center justify-center h-10 w-10">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">生徒詳細</h2>
+<div class="w-10"></div>
+</div>
+</nav>
+<main class="max-w-md mx-auto pb-28">
+<div class="flex p-8 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-white dark:border-gray-800 shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGZ2y_ION0vjTFFKHgtK1qJXeSUHWSjFMqLPHs9kNgpLGyVL5J77pEKwtn1VDESMadaHY37FE4zZSSkyeM9dhShgMcYUD8JXxTuhlCSTSdBPU8uM2uO6t2BS_NsxB5aVrLbiUiWTHL59Gf-wijrtxzcd0mkdgfH9MvX3yUZ-Dtkt4Z8Bj3aC-SnRv3Eq-LGt17PFM-nwgWjPNL2UYVao0wCoFFDl4RBiS_YgF-LJi1LUYx3Am1uhc7YlkEdrTxw9GMV6KTz49zn78");'>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<p class="text-[#111418] dark:text-white text-[24px] font-bold leading-tight tracking-[-0.015em]">佐藤 美咲</p>
+<p class="text-primary font-bold text-base mt-1">高校2年生</p>
+<div class="flex items-center gap-1 text-[#617589] dark:text-gray-400 text-sm mt-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>東京都 世田谷区</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 space-y-4">
+<div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">person_search</span>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">自己紹介</h3>
+</div>
+<p class="text-[#111418] dark:text-gray-300 text-base font-normal leading-relaxed">
+                    数学が苦手ですが、志望校合格に向けて頑張りたいと思っています。基礎からしっかり学び直したいです。部活動は吹奏楽部に所属しており、平日は19時以降の指導を希望します。丁寧な指導をお願いします。
+                </p>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm">
+<div class="p-5 border-b border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">プロフィール詳細</h3>
+</div>
+</div>
+<div class="divide-y divide-gray-50 dark:divide-gray-800">
+<div class="flex justify-between p-5">
+<span class="text-[#617589] dark:text-gray-400">生年月日</span>
+<span class="font-medium dark:text-white">2007年 5月 12日</span>
+</div>
+<div class="flex justify-between p-5">
+<span class="text-[#617589] dark:text-gray-400">性別</span>
+<span class="font-medium dark:text-white">女性</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-5">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold">希望学習内容</h3>
+</div>
+<div class="space-y-5">
+<div>
+<p class="text-sm font-bold text-[#617589] dark:text-gray-400 mb-3">希望科目</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold">数学 IA/IIB</span>
+<span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold">英語コミュニケーション</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-[#617589] dark:text-gray-400 mb-2">学習目標</p>
+<p class="text-base font-medium dark:text-white leading-relaxed">定期テストで80点以上、MARCHレベルの大学合格</p>
+</div>
+<div>
+<p class="text-sm font-bold text-[#617589] dark:text-gray-400 mb-2">指導スタイル</p>
+<p class="text-base font-medium dark:text-white leading-relaxed">例題を一緒に解きながら、解法のプロセスを重視するスタイル</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 p-4 pb-8 z-50">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-2xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat_bubble</span>
+                生徒に連絡する
+            </button>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>学習情報の編集</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": {
+                  DEFAULT: "#4338CA", // Indigo 700
+                  light: "#EEF2FF", // Indigo 50
+                },
+                "background-light": "#F9FAFB", // Gray 50
+                "background-dark": "#111827", // Gray 900
+                "surface-light": "#FFFFFF",
+                "surface-dark": "#1F2937", // Gray 800
+                "text-primary-light": "#1F2937", // Gray 800
+                "text-primary-dark": "#F9FAFB", // Gray 50
+                "text-secondary-light": "#6B7280", // Gray 500
+                "text-secondary-dark": "#9CA3AF", // Gray 400
+                "border-light": "#E5E7EB", // Gray 200
+                "border-dark": "#374151", // Gray 700
+              },
+              fontFamily: {
+                "display": ["Noto Sans JP", "sans-serif"]
+              },
+              borderRadius: {
+                "DEFAULT": "0.75rem",
+                "lg": "1rem",
+                "xl": "1.5rem",
+                "full": "9999px"
+              },
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+          min-height: 100dvh;
+          background-color: #F9FAFB;
+        }
+        .dark body {
+          background-color: #111827;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 flex h-16 items-center border-b border-border-light bg-background-light/80 px-4 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80">
+<button class="flex size-10 shrink-0 items-center justify-center text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold tracking-tight">学習情報の編集</h1>
+<div class="size-10 shrink-0"></div>
+</header>
+<main class="flex-1 px-6 py-8">
+<div class="mx-auto max-w-lg space-y-8">
+<div class="space-y-3">
+<label class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark" for="grade">学年</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border-border-light bg-surface-light p-4 pr-10 text-base focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:focus:border-primary" id="grade">
+<option>中学2年生</option>
+<option>中学1年生</option>
+<option>中学3年生</option>
+<option>高校1年生</option>
+<option>高校2年生</option>
+<option>高校3年生</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary-light dark:text-text-secondary-dark">expand_more</span>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">学習したい科目</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 rounded-lg border bg-surface-light p-3 text-sm font-medium transition-colors hover:bg-primary-light dark:border-border-dark dark:bg-surface-dark dark:hover:bg-primary/10">
+<span class="material-symbols-outlined text-lg text-text-secondary-light dark:text-text-secondary-dark">calculate</span>
+                        数学
+                    </button>
+<button class="flex items-center justify-center gap-2 rounded-lg border bg-primary-light p-3 text-sm font-medium text-primary ring-2 ring-primary transition-colors dark:border-primary dark:bg-primary/20">
+<span class="material-symbols-outlined text-lg">translate</span>
+                        英語
+                    </button>
+<button class="flex items-center justify-center gap-2 rounded-lg border bg-surface-light p-3 text-sm font-medium transition-colors hover:bg-primary-light dark:border-border-dark dark:bg-surface-dark dark:hover:bg-primary/10">
+<span class="material-symbols-outlined text-lg text-text-secondary-light dark:text-text-secondary-dark">science</span>
+                        理科
+                    </button>
+<button class="flex items-center justify-center gap-2 rounded-lg border bg-surface-light p-3 text-sm font-medium transition-colors hover:bg-primary-light dark:border-border-dark dark:bg-surface-dark dark:hover:bg-primary/10">
+<span class="material-symbols-outlined text-lg text-text-secondary-light dark:text-text-secondary-dark">history_edu</span>
+                        社会
+                    </button>
+</div>
+<button class="w-full rounded-lg border border-dashed border-border-light p-3 text-sm font-medium text-text-secondary-light transition-colors hover:bg-slate-50 dark:border-border-dark dark:text-text-secondary-dark dark:hover:bg-white/5">科目を選択</button>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark" for="goal">学習目標</label>
+<textarea class="min-h-[120px] w-full resize-none rounded-lg border-border-light bg-surface-light p-4 text-base placeholder:text-text-secondary-light focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary" id="goal" placeholder="例：定期テストで平均80点以上取る"></textarea>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">希望する指導スタイル</label>
+<div class="space-y-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg bg-surface-light p-4 dark:bg-surface-dark">
+<input class="border-border-light text-primary focus:ring-primary/50 dark:border-border-dark dark:bg-surface-dark dark:checked:bg-primary" name="style" type="radio"/>
+<span class="flex-1 text-base">基礎からじっくり</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg bg-surface-light p-4 dark:bg-surface-dark">
+<input checked="" class="border-border-light text-primary focus:ring-primary/50 dark:border-border-dark dark:bg-surface-dark dark:checked:bg-primary" name="style" type="radio"/>
+<span class="flex-1 text-base">応用問題に挑戦</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg bg-surface-light p-4 dark:bg-surface-dark">
+<input class="border-border-light text-primary focus:ring-primary/50 dark:border-border-dark dark:bg-surface-dark dark:checked:bg-primary" name="style" type="radio"/>
+<span class="flex-1 text-base">学校の予習・復習</span>
+</label>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-surface-light p-6 dark:bg-surface-dark/80 dark:backdrop-blur-sm">
+<button class="w-full rounded-full bg-primary py-4 text-base font-bold text-white transition-opacity hover:opacity-90 active:opacity-80">保存する</button>
+</footer>
+</div>
+
+</body></html>

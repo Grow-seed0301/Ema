@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>生徒ダッシュボード</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4A90E2",
+            "accent": "#7ED321",
+            "background-light": "#F8F9FA",
+            "background-dark": "#1A1A1A",
+            "text-primary-light": "#4A4A4A",
+            "text-primary-dark": "#E9ECEF",
+            "text-secondary-light": "#6c757d",
+            "text-secondary-dark": "#adb5bd",
+            "card-light": "#FFFFFF",
+            "card-dark": "#2C2C2C",
+            "border-light": "#E9ECEF",
+            "border-dark": "#3A3A3A"
+          },
+          fontFamily: {
+            "display": ["Inter", "Noto Sans JP", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden pb-24">
+<div class="flex flex-col gap-2 bg-background-light dark:bg-background-dark p-4 pb-2 sticky top-0 z-10 border-b border-border-light dark:border-border-dark">
+<div class="flex items-center h-12 justify-between">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="生徒のプロフィール画像" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtwjstssfaz27h4nlAUslCRcroArvry5kwWKK7FxFhC6z0cTaUDerSOMNwLfujeH55tEFUHrFqpwy-CdJ6FUsg0QzJjiLOSupREQvmquLrn5eTpzi8Oztm4BnYxGHBHVr2ZmZ75ohKsP4fiA3qc-_c5GoCyKfotS1Bnf-yMoLjOQwdKMpSpNxaII2g7KZ8EiA0l73sXlwyu6bYUm0Q5ItIlf9TcKD7bEOii8stA7m8dCS_3k63qenhzqUSEpLaaKp1R6K3Bjqljw");'></div>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 w-12 hover:bg-black/5 dark:hover:bg-white/10 text-text-primary-light dark:text-text-primary-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<p class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-[28px] font-bold leading-tight">こんにちは、大樹さん</p>
+</div>
+<div class="px-4 pt-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 flex flex-col justify-between border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">現在のプラン</p>
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">スタンダード</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 flex flex-col justify-between border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">今月の残りレッスン数</p>
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">4 回</p>
+</div>
+</div>
+</div>
+<div class="px-4 pt-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex justify-between items-center mb-2">
+<p class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">学習目標への進捗</p>
+<p class="text-sm font-bold text-primary">60%</p>
+</div>
+<div class="w-full bg-border-light dark:bg-border-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 60%"></div>
+</div>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-2">目標: 微分積分をマスターする</p>
+</div>
+</div>
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover @xl:w-2/5 @xl:aspect-square" data-alt="数学のレッスンを表す抽象的な画像" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfk46l5tfuvrmXMCTAB0Gw2g4NlbVxncctR1kw2cBiywt3etHGOneJ8hqEfIiSHDZ6g6pMNMb-kX4twMbJLx2867TDQLUaYjDurrheW5-22GQMni-wsDe3NDYrFDr_Tnq_dh1QvM8275Ys53BT4UFZzDXQhqwCXWX_DjfhbdvNgK-Evvzzt3cVIj4ho8PZ67FYjtOFhxkSP8DrGnSNTfCJzjy1DurmttVvABPB5FTk62LfYtTrpRsG4fPEhGfq3AvO_m_lJrxSBA");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4 @xl:p-6">
+<p class="text-primary text-sm font-medium leading-normal">次の予約レッスン</p>
+<p class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight tracking-[-0.015em]">高校数学III - 微分積分</p>
+<div class="flex flex-col gap-4 mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base font-normal leading-normal">田中 先生 | 2024年10月26日 15:00</p>
+<p class="text-accent text-base font-medium leading-normal">あと1時間で開始します</p>
+</div>
+<button class="flex min-w-[84px] w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-medium leading-normal shadow-sm hover:opacity-90">
+<span class="truncate">レッスンに参加する</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-0 pt-4">あなたへのおすすめ教師</h3>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-3 text-center rounded-lg min-w-36">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-24" data-alt="教師のプロフィール写真" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWwEA180sXriu111qcgexnW8Qk9aE5R2flo9aupm3XR84MUp0acLq3BL5y4foytRX2RHbR70Gg6KsQEqhXlPIblIu4lk4O4fcs8qF_kLYe7vYuholSR1yXVR3CSx2AnlypWpPlyCzuzSMKE1FDD3SW-jwI4DA3Ez_VPJtcy5jFg2KM_O5t37xDsy1qoqCcCXMjUdhW9zDGkYt9AImHwBwpkyrKyDxlQBrEitHJZmU-Isojm1I7uajhKBf3KTtRfaf0kZjOmRD8dw");'></div>
+<div>
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">鈴木 先生</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">物理</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-3 text-center rounded-lg min-w-36">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-24" data-alt="教師のプロフィール写真" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMDsEKDo82TKg20ZCJZ1gZuAJuEVYzVKxL3ohFzHEaBAshKphkE6YqjSPBFt9suJQELdarQObhsfvPE7SukMGqzjo3IBHBKCaWdqBTi9nf43pS9tDKTXqCcViSNtkOtgJEvmtr21nCibVIUMva_XTrlSUITfn3ZGNugOlY8tLNkXVXKYJyzkY5umnvsvDtk7iDNsBL8QO-MDf8MWAFoZjTA9dljcPb3jGmVWpOnnAh2e9s5r2ugj5VfIa1akZl4PaCVf1zODxhvQ");'></div>
+<div>
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">佐藤 先生</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">英語</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-3 text-center rounded-lg min-w-36">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-24" data-alt="教師のプロフィール写真" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxYlKHIncexBbv_LllX7ZXSj8BYkonEnkmKoOGk_bpR1bg4cgsCHv9S630mJT6KORx5eo5EczqWwY95DbEPKW5kqE2WDNzjosvku6BgCI_Qnf1kTn18KomoMqF7yd6a2zQFCEI2oGeJGjXGYn6DUaQf0MpDj19hf0EUgObIDvbEGQ9KFzawaDiuO1RibBTShCjwvalKal22GJRedb8O-37FIhxSl3GU7fLWVRxCs9td1jNii5hCfZmtCab-SWdNCwsFXHEWjFz0A");'></div>
+<div>
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">高橋 先生</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">歴史</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-3 text-center rounded-lg min-w-36">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-24" data-alt="教師のプロフィール写真" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAj3uUAWVYFo9Jp6DvOOGv_si1s0ZsJErdhZb0Q3aIW5TO7dwRQQ8_gKtjN1ptrajwRPQ-5i4e15BpcgLPUhgw1O5SQxKaOisiQNaLcBPWeYj7IQF85sv9BYUpCZPlk5nz48Ndi5OO6koPwA7RfozYlg2ngordkZIdQQJua6dh5zuLqE2LbJNvQO87dk8_yTTtJ7nWpv_FylJ7lp585gFGnMJRsjU3bWjI028qb4Uht2xnZsU-CJvaNXdg_pCp1u4Y4S89zgvrZQ");'></div>
+<div>
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal">伊藤 先生</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">化学</p>
+</div>
+</div>
+</div>
+</div>
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">学習サマリー</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 flex items-center gap-4 border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">今月の学習時間</p>
+<p class="text-xl font-bold text-text-primary-light dark:text-text-primary-dark">12.5 時間</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 flex items-center gap-4 border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-full bg-accent/10 text-accent">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+</div>
+<div>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">完了したレッスン</p>
+<p class="text-xl font-bold text-text-primary-light dark:text-text-primary-dark">8 回</p>
+</div>
+</div>
+</div>
+<div class="px-4 pt-6">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary/20 text-primary text-base font-medium leading-normal hover:bg-primary/30">
+<span class="truncate">新しいレッスンを予約する</span>
+</button>
+</div>
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-lg border-t border-border-light dark:border-border-dark z-50">
+<div class="flex justify-around items-center h-full max-w-lg mx-auto">
+<a class="flex flex-col items-center justify-center text-primary w-1/4" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">ホーム</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary w-1/4" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">教師検索</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary w-1/4" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs font-medium">メッセージ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary w-1/4" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">マイページ</span>
+</a>
+</div>
+</div>
+</div>
+
+</body></html>

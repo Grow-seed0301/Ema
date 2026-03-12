@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>教師を探す</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4F46E5",
+              "background-light": "#F9FAFB",
+              "background-dark": "#111827",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1F2937",
+              "text-primary-light": "#111827",
+              "text-primary-dark": "#F9FAFB",
+              "text-secondary-light": "#6B7280",
+              "text-secondary-dark": "#9CA3AF",
+            },
+            fontFamily: {
+              "display": ["Noto Sans JP", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 20
+      }
+      .icon-filled {
+        font-variation-settings: 'FILL' 1;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-3xl">arrow_back_ios_new</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight flex-1 text-center">教師を探す</h1>
+<div class="flex w-12 items-center justify-end">
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="px-4 py-4">
+<div class="relative flex w-full items-center">
+<div class="text-text-secondary-light dark:text-text-secondary-dark absolute left-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input h-14 w-full rounded-full border border-slate-200 bg-surface-light p-0 pl-12 pr-16 text-base font-normal leading-normal text-text-primary-light placeholder:text-text-secondary-light focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:border-slate-700/50 dark:bg-surface-dark dark:text-text-primary-dark dark:placeholder:text-text-secondary-dark" placeholder="キーワードで検索" value=""/>
+<button class="absolute right-2 flex size-10 items-center justify-center rounded-full text-text-secondary-light transition-colors hover:bg-slate-100 dark:text-text-secondary-dark dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-2xl">tune</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 pb-4 pt-2">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">50人の教師</p>
+<div class="flex items-center gap-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-primary px-4 text-white">
+<p class="text-sm font-medium leading-normal">評価順</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-slate-200 bg-surface-light px-4 dark:border-slate-700 dark:bg-surface-dark">
+<p class="text-sm font-medium leading-normal text-text-primary-light dark:text-text-primary-dark">料金順</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-slate-200 bg-surface-light px-4 dark:border-slate-700 dark:bg-surface-dark">
+<p class="text-sm font-medium leading-normal text-text-primary-light dark:text-text-primary-dark">新着順</p>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4 px-4 pb-8">
+<div class="relative flex items-start gap-4 rounded-xl bg-surface-light p-4 dark:bg-surface-dark">
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQ6IP5v3c2AWBKnB9GcdgJNQFmyF7u6MJ3DPflmvx1MzoNUAA5DT1ljgVmnShncSKv0kAygXqymjD8FSejlN_Xd-oYBU7FO4vlwVJhUzp8nxYx7CKAp5KSilKgc-ojwz-pTwOmB8bQjlrZkvSH_cS9Jh_Yn0L6w1-u4Rq-uqcLwleYQPCNSk2ff3WfJ41nyJZSXmiSg32Yg7-TzgQknwcNztBn7PHe7r_hxkSoW04hKHPko82q3pEuxRejR_Ile_etEmKQvtc7tmk");'></div>
+<div class="flex flex-[1_1_0px] flex-col gap-1.5">
+<p class="text-base font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">田中 圭 <span class="ml-1 text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">28歳</span></p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">初心者向け英会話</p>
+<div class="flex items-center gap-3 pt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-amber-500 icon-filled">star</span>
+<span class="font-medium text-text-primary-light dark:text-text-primary-dark">4.9</span>
+<span class="text-xs">(82)</span>
+</div>
+</div>
+<p class="pt-2 text-base font-bold leading-normal text-primary dark:text-indigo-400">¥4,500 <span class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">/ 時間</span></p>
+</div>
+<button class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1.5 text-text-secondary-light transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-text-secondary-dark dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span class="text-sm font-medium">1.2k</span>
+</button>
+</div>
+<div class="relative flex items-start gap-4 rounded-xl bg-surface-light p-4 dark:bg-surface-dark">
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGdXalTMgHyu9vsTbES8_YLu4MpukIHnjPAtbVHmsF377651ffoDwDdB26TKdWBKRDfCROvRsg8g2glNq2ANwBZGChfgoqplJJHwpHt0CuwODoGzzd6V9oB2-KyS87scw0jU0VvWTwLTLyCDZPCOC-Ir79L-Y-fMdov5gIMpdWl3prOZT4Yhxr5g_ZS2OHRyNM9zPt7L7kf5F_73jzIKnqGE3RjoEy1ADZVBRDt8xrKtjAHGgmvqci2BrUHFWn03XlajdZWlV6JSU");'></div>
+<div class="flex flex-[1_1_0px] flex-col gap-1.5">
+<p class="text-base font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">佐藤 あかり <span class="ml-1 text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">35歳</span></p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">ビジネス数学・統計学</p>
+<div class="flex items-center gap-3 pt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-amber-500 icon-filled">star</span>
+<span class="font-medium text-text-primary-light dark:text-text-primary-dark">5.0</span>
+<span class="text-xs">(120)</span>
+</div>
+</div>
+<p class="pt-2 text-base font-bold leading-normal text-primary dark:text-indigo-400">¥8,000 <span class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">/ 時間</span></p>
+</div>
+<button class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-pink-100 px-3 py-1.5 text-pink-500 transition-colors hover:bg-pink-200 dark:bg-pink-900/50 dark:text-pink-400 dark:hover:bg-pink-900/80">
+<span class="material-symbols-outlined text-base icon-filled">favorite</span>
+<span class="text-sm font-medium">2.5k</span>
+</button>
+</div>
+<div class="relative flex items-start gap-4 rounded-xl bg-surface-light p-4 dark:bg-surface-dark">
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6rLYhQBga7SIO_2RyMS_2zDJwWzrslFRnki48aFX0h_gX75dS_9PxFPhx8nYkpAwiOYItmJYrbp6dZvqsF4RwcM1Upivus293ReQuh6boKabs63l8UyjB2IC7jTzOSF9p7CCUw3GJuUFGTBKlUCesQh63s5uJTNBMfXBoR-zzCftBhSGdTgel6QweMBlUsiGDTSF6m4P81Y89P3uniV5YS9QaP0AKyvwxGvC6YLKHASfzGZxeS5O1dYN21RdkQ-4PkHEW1bwxm4k");'></div>
+<div class="flex flex-[1_1_0px] flex-col gap-1.5">
+<p class="text-base font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">鈴木 健太 <span class="ml-1 text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">42歳</span></p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">クラシックギター入門</p>
+<div class="flex items-center gap-3 pt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-amber-500 icon-filled">star</span>
+<span class="font-medium text-text-primary-light dark:text-text-primary-dark">4.8</span>
+<span class="text-xs">(45)</span>
+</div>
+</div>
+<p class="pt-2 text-base font-bold leading-normal text-primary dark:text-indigo-400">¥3,800 <span class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">/ 時間</span></p>
+</div>
+<button class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1.5 text-text-secondary-light transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-text-secondary-dark dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span class="text-sm font-medium">890</span>
+</button>
+</div>
+<div class="relative flex items-start gap-4 rounded-xl bg-surface-light p-4 dark:bg-surface-dark">
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAurcOHjAsOmDgVQERnP3UnGOmUhbL3pZkg7TluRmC7QORu66g4vztewy4ZPw6HeZ9NrCEfzurldBqaDYv0R2q7Umzv4Xpup5UZ3-isx2njAkTQ3llpwtRI-fUclIg9yMy1hG_S5Kl2S0Li9pXMQgo_4Dx7TmhyoCgoqcsmg6SVxuBdsFbrI7_JiUtXxLEyp6DMBolkL1Nq6ab1BpnvIPhtA5xiEdSSF3WHi3B8I70JpDuQfJ0Aai0RVak7TlgDSCXnfCK0xIVPkD0");'></div>
+<div class="flex flex-[1_1_0px] flex-col gap-1.5">
+<p class="text-base font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">高橋 美咲 <span class="ml-1 text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">25歳</span></p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">デッサン・油絵指導</p>
+<div class="flex items-center gap-3 pt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-amber-500 icon-filled">star</span>
+<span class="font-medium text-text-primary-light dark:text-text-primary-dark">4.9</span>
+<span class="text-xs">(67)</span>
+</div>
+</div>
+<p class="pt-2 text-base font-bold leading-normal text-primary dark:text-indigo-400">¥5,500 <span class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">/ 時間</span></p>
+</div>
+<button class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1.5 text-text-secondary-light transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-text-secondary-dark dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span class="text-sm font-medium">980</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

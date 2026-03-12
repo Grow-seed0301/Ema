@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>プロフィール編集</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": {
+              DEFAULT: "#4338CA", // Indigo 700
+              light: "#E0E7FF", // Indigo 100
+              dark: "#3730A3", // Indigo 800
+            },
+            "background-light": "#F9FAFB", // Gray 50
+            "background-dark": "#111827", // Gray 900
+            "surface-light": "#FFFFFF", // White
+            "surface-dark": "#1F2937", // Gray 800
+            "text-light": "#111827", // Gray 900
+            "text-dark": "#F9FAFB", // Gray 50
+            "subtext-light": "#6B7280", // Gray 500
+            "subtext-dark": "#9CA3AF", // Gray 400
+            "border-light": "#E5E7EB", // Gray 200
+            "border-dark": "#374151", // Gray 700
+          },
+          fontFamily: {
+            "display": ["Inter", "Noto Sans JP", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem", // 12px
+            "lg": "1rem", // 16px
+            "xl": "1.5rem", // 24px
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #F9FAFB;
+      min-height: 100dvh;
+    }
+    .dark body {
+      background-color: #111827;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus, .form-multiselect:focus, .form-checkbox:focus, .form-radio:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+        border-color: #4338CA;}
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 px-4 py-3 backdrop-blur-md dark:bg-background-dark/80">
+<div class="flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-text-light dark:text-text-dark">arrow_back</span>
+</div>
+<h1 class="text-lg font-semibold text-text-light dark:text-text-dark">プロフィール編集</h1>
+<div class="flex size-10 items-center justify-center">
+</div>
+</div>
+<main class="flex flex-1 flex-col space-y-12 px-6 pt-8 pb-32">
+<section class="flex flex-col gap-6">
+<h2 class="text-xl font-bold tracking-tight text-text-light dark:text-text-dark">専門性</h2>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col w-full">
+<label class="mb-2 text-sm font-medium text-subtext-light dark:text-subtext-dark" for="subjects">専門科目</label>
+<div class="flex flex-wrap items-center gap-2 rounded-lg border border-border-light bg-surface-light p-3 transition-shadow,border-color duration-200 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:focus-within:border-primary">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1 rounded-md bg-primary-light pl-2.5 pr-1.5 dark:bg-primary/20">
+<p class="text-sm font-medium text-primary dark:text-primary-light">数学</p>
+<span class="material-symbols-outlined cursor-pointer !text-lg !font-light text-primary dark:text-primary-light">close</span>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1 rounded-md bg-primary-light pl-2.5 pr-1.5 dark:bg-primary/20">
+<p class="text-sm font-medium text-primary dark:text-primary-light">物理</p>
+<span class="material-symbols-outlined cursor-pointer !text-lg !font-light text-primary dark:text-primary-light">close</span>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1 rounded-md bg-primary-light pl-2.5 pr-1.5 dark:bg-primary/20">
+<p class="text-sm font-medium text-primary dark:text-primary-light">プログラミング</p>
+<span class="material-symbols-outlined cursor-pointer !text-lg !font-light text-primary dark:text-primary-light">close</span>
+</div>
+<input class="form-input min-w-[120px] flex-1 border-none bg-transparent p-1 text-base text-text-light placeholder:text-subtext-light focus:ring-0 dark:text-text-dark dark:placeholder:text-subtext-dark" id="subjects" placeholder="科目追加..."/>
+</div>
+</div>
+<div class="flex flex-col w-full">
+<label class="mb-2 text-sm font-medium text-subtext-light dark:text-subtext-dark" for="experience">指導経験</label>
+<textarea class="form-textarea min-h-36 w-full flex-1 resize-y rounded-lg border border-border-light bg-surface-light p-4 text-base font-normal leading-relaxed text-text-light placeholder:text-subtext-light transition-shadow,border-color duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:text-text-dark dark:placeholder:text-subtext-dark dark:focus:border-primary" id="experience" placeholder="例：個別指導塾で5年間、高校生に数学と物理を指導。">生徒一人ひとりの学習スタイルに合わせた丁寧な指導を心がけています。特に理系科目が得意で、複雑な概念も分かりやすく解説します。</textarea>
+</div>
+<div class="flex flex-col w-full">
+<label class="mb-2 text-sm font-medium text-subtext-light dark:text-subtext-dark" for="experience-years">指導経験年数</label>
+<div class="relative">
+<input class="form-input h-14 w-full rounded-lg border border-border-light bg-surface-light px-4 text-base text-text-light placeholder:text-subtext-light transition-shadow,border-color duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-surface-dark dark:text-text-dark dark:placeholder:text-subtext-dark dark:focus:border-primary" id="experience-years" inputmode="numeric" placeholder="例: 5" type="number"/>
+<span class="pointer-events-none absolute inset-y-0 right-4 flex items-center text-sm text-subtext-light dark:text-subtext-dark">年</span>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold tracking-tight text-text-light dark:text-text-dark">経歴・資格</h2>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-light text-primary transition-colors hover:bg-primary/20 active:scale-95 dark:bg-primary/20 dark:text-primary-light dark:hover:bg-primary/30">
+<span class="material-symbols-outlined !text-2xl !font-light">add</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="rounded-lg border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<p class="text-base font-semibold text-text-light dark:text-text-dark">東京大学 理学部</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">学士号・2015年卒業</p>
+</div>
+<span class="material-symbols-outlined text-subtext-light dark:text-subtext-dark">chevron_right</span>
+</div>
+</div>
+<div class="rounded-lg border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<p class="text-base font-semibold text-text-light dark:text-text-dark">ABCテクノロジー株式会社</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">ソフトウェアエンジニア・2015年〜2020年</p>
+</div>
+<span class="material-symbols-outlined text-subtext-light dark:text-subtext-dark">chevron_right</span>
+</div>
+</div>
+<div class="rounded-lg border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<p class="text-base font-semibold text-text-light dark:text-text-dark">応用情報技術者試験</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">2018年取得</p>
+</div>
+<span class="material-symbols-outlined text-subtext-light dark:text-subtext-dark">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 border-t border-border-light bg-background-light/90 p-4 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/90">
+<button class="flex h-14 w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-base font-semibold tracking-wide text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-dark active:scale-[0.98]">
+<span class="truncate">変更を保存</span>
+</button>
+</div>
+</div>
+
+</body></html>

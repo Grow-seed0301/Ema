@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>メッセージ</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4F46E5", // Indigo-600 for a modern, calm blue
+            "background-light": "#F9FAFB", // A very light gray, almost white
+            "background-dark": "#030712", // Nearly black for deep dark mode
+            "surface-light": "#FFFFFF", // White for cards
+            "surface-dark": "#111827", // Dark gray for cards
+            "text-primary-light": "#111827", // Dark gray for text
+            "text-primary-dark": "#F9FAFB", // Light gray for text
+            "text-secondary-light": "#6B7280", // Medium gray for secondary text
+            "text-secondary-dark": "#9CA3AF", // Lighter gray for secondary text
+          },
+          fontFamily: {
+            "display": ["Manrope", "Noto Sans JP", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 300, 'GRAD' 0,
+        'opsz' 24
+    }
+    body {
+      min-height: 100dvh;
+      background-color: #F9FAFB;
+    }
+    .dark body {
+      background-color: #030712;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative mx-auto flex min-h-screen w-full max-w-md flex-col overflow-x-hidden bg-background-light dark:bg-background-dark">
+<div class="sticky top-0 z-10 w-full bg-background-light/80 pt-8 backdrop-blur-md dark:bg-background-dark/80">
+<div class="px-6 pb-4">
+<h1 class="text-3xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">チャット</h1>
+</div>
+<div class="px-6 pb-4">
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark" style="font-weight: 300;">search</span>
+</div>
+<input class="form-input h-12 w-full rounded-full border-gray-200 bg-gray-100 px-12 text-base font-normal text-text-primary-light placeholder:text-text-secondary-light focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/50 dark:border-surface-dark dark:bg-surface-dark dark:text-text-primary-dark dark:placeholder:text-text-secondary-dark dark:focus:bg-surface-dark dark:focus:ring-primary/60" placeholder="検索" type="search" value=""/>
+</div>
+</div>
+</div>
+<div class="flex flex-1 flex-col space-y-2 px-4 pb-4">
+<div class="flex cursor-pointer items-start gap-4 rounded-xl p-4 transition-colors hover:bg-gray-100 dark:hover:bg-surface-dark">
+<div class="relative shrink-0">
+<img alt="Profile picture of Tanaka Keiichi" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_kU-SegcX-1XALAT3iNfoKxU317hfNDTlZh4YNFL_JSZdoX7swdZEUYZsVvMgAfrDvzbH-b5y8QCw9OqRVKbXEAzss1D8KmaiiFSiUxcDnmkYI-vNIZST82mP84grY97aBTGcMVIha2v7lTM1ErI9yJwKOO6fE4VLuEJBCTh4sppmCfnLPQ_wv5bTa5ghE3Ue8uIQXwron7ZN3-o8tFezKV_6W4GQA0OqotjMh2s_Vczk8twYP3juO5E7ZDVa5f20LAHWjbzPBO4"/>
+</div>
+<div class="flex min-w-0 flex-1 flex-col gap-1">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-bold text-text-primary-light dark:text-text-primary-dark">田中 圭一</p>
+<p class="shrink-0 text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">15分前</p>
+</div>
+<div class="flex items-start justify-between gap-3">
+<p class="w-10/12 truncate text-sm font-semibold text-text-secondary-light dark:text-text-secondary-dark">ありがとうございます。次のレッスンで...</p>
+<div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">2</div>
+</div>
+<div class="mt-1.5 flex flex-wrap gap-2">
+<div class="flex items-center justify-center rounded-md bg-blue-50 px-2.5 py-1 dark:bg-blue-950">
+<p class="text-xs font-medium text-blue-600 dark:text-blue-300">数学</p>
+</div>
+<div class="flex items-center justify-center rounded-md bg-blue-50 px-2.5 py-1 dark:bg-blue-950">
+<p class="text-xs font-medium text-blue-600 dark:text-blue-300">物理</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex cursor-pointer items-start gap-4 rounded-xl p-4 transition-colors hover:bg-gray-100 dark:hover:bg-surface-dark">
+<div class="relative shrink-0">
+<img alt="Profile picture of Suzuki Yuko" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLSp7-yGbN8UIHU63lUT-vOEvLwu6o0Y_AlKS5n3VoMod0c58hvlxd00qF8NCVSLMxY25ZJd0h8SfJr_iYcOHH4kyphrnfr1G8JZBLakS_XAFBcc5A4wuCynTc3rLfdKiHfoa-G-kLnssq4yneqcbQr1Gc1FlT9rpK_whOFv0esxd6rsr-pOJtYA7XFkY7-ns5vBa6A-nSXVZS7O7_Bd9KrtIVCHWF3nS6Fm4PQl6d5runGRtsAyFV3zmsHAbyKoxL4iXUwtyPls"/>
+</div>
+<div class="flex min-w-0 flex-1 flex-col gap-1">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-bold text-text-primary-light dark:text-text-primary-dark">鈴木 裕子</p>
+<p class="shrink-0 text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">昨日</p>
+</div>
+<div class="flex items-start justify-between gap-3">
+<p class="w-full truncate text-sm text-text-secondary-light dark:text-text-secondary-dark">はい、承知いたしました。</p>
+</div>
+<div class="mt-1.5 flex flex-wrap gap-2">
+<div class="flex items-center justify-center rounded-md bg-orange-50 px-2.5 py-1 dark:bg-orange-950">
+<p class="text-xs font-medium text-orange-600 dark:text-orange-300">英語</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex cursor-pointer items-start gap-4 rounded-xl p-4 transition-colors hover:bg-gray-100 dark:hover:bg-surface-dark">
+<div class="relative shrink-0">
+<img alt="Profile picture of Sato Ken" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeFKnpUk7mGyx6mpPoona3MwKDYpXDW-oj0lzQ0JpG3E8o0WmxURvXO1uhQlCnmBeeCpYIFMZrVKx7Bq4NULz-IOYo03NXjE5FNiokia9WkF6dPhkFICbFw9pfBCoLNoUkGohcjZGnEsUZ-qRkzSKZ80S55RWBrX69XK_sWuKwhckxscy_OaBcwMHZSjbGC-F8gOvJqn5jnZ_mNLqRYje2ccUVVz7l9T3uuBNioOeXrzSw53heA_xTeq9fP_TyMKHNCso2l3WAx4c"/>
+</div>
+<div class="flex min-w-0 flex-1 flex-col gap-1">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-bold text-text-primary-light dark:text-text-primary-dark">佐藤 健</p>
+<p class="shrink-0 text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">4/12</p>
+</div>
+<div class="flex items-start justify-between gap-3">
+<p class="w-full truncate text-sm text-text-secondary-light dark:text-text-secondary-dark">課題の提出をお願いします。</p>
+</div>
+<div class="mt-1.5 flex flex-wrap gap-2">
+<div class="flex items-center justify-center rounded-md bg-teal-50 px-2.5 py-1 dark:bg-teal-950">
+<p class="text-xs font-medium text-teal-600 dark:text-teal-300">プログラミング</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden flex-1 flex-col items-center justify-center px-4 py-16 text-center">
+<span class="material-symbols-outlined mb-4 text-6xl text-slate-400 dark:text-slate-500">chat_bubble</span>
+<h3 class="text-lg font-bold text-slate-800 dark:text-slate-200">まだマッチした教師がいません</h3>
+<p class="mt-1 max-w-xs text-sm text-slate-500 dark:text-slate-400">まずは気になる教師を探してみましょう。</p>
+<button class="mt-6 flex h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-primary px-6 text-base font-bold text-white">
+<span>教師を探す</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

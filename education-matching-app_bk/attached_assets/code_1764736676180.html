@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>お気に入り教師一覧</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a2733",
+                        "text-light-primary": "#111921",
+                        "text-dark-primary": "#f6f7f8",
+                        "text-light-secondary": "#6b7280",
+                        "text-dark-secondary": "#9ca3af",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+<div class="flex h-screen flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between border-b border-gray-200/80 bg-background-light/80 px-4 backdrop-blur-sm dark:border-gray-800/80 dark:bg-background-dark/80">
+<button class="flex h-10 w-10 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl text-text-light-primary dark:text-text-dark-primary">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">お気に入り</h1>
+<button class="flex h-10 w-10 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl text-text-light-primary dark:text-text-dark-primary">tune</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto p-4">
+<div class="flex flex-col gap-4">
+<!-- Teacher Profile Card 1 -->
+<div class="flex cursor-pointer flex-col gap-4 rounded-xl bg-card-light p-4 shadow-sm transition-shadow duration-200 hover:shadow-md dark:bg-card-dark">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<img class="h-16 w-16 rounded-full object-cover" data-alt="Profile picture of a female teacher smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdDieR6dBh9koNjcJTKIx3V_dvSK4QUY9DPC8GXBX2fvhQhsB4275HB-vM-ucBujwPbaLYt2609kp3GHORhvFT0aBgdUlF37BnXk5M2Vph8J-sHcNI31wSzimOzgNS90UPpMvy8zL_gQjU03WBX9RA3OVbpLISTzmZ1SUZi2qKgU2W0v63A3bljv0SX9jP-CnMAFl7HIuHkuhU-WJ4gKMcUCZp-vLew2GHbqqp2MfJRzf1YcLXN2eCsUkgjn5EKVVOnXHFEX4t2A"/>
+<div>
+<h2 class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">田中 恵子</h2>
+<div class="mt-1 flex items-center gap-1 text-sm text-text-light-secondary dark:text-text-dark-secondary">
+<span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span>4.9 (58)</span>
+</div>
+</div>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20">数学</span>
+<span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20">物理</span>
+</div>
+<p class="whitespace-nowrap text-base font-semibold text-text-light-primary dark:text-text-dark-primary">¥4,500 <span class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">/ 時間</span></p>
+</div>
+</div>
+<!-- Teacher Profile Card 2 -->
+<div class="flex cursor-pointer flex-col gap-4 rounded-xl bg-card-light p-4 shadow-sm transition-shadow duration-200 hover:shadow-md dark:bg-card-dark">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<img class="h-16 w-16 rounded-full object-cover" data-alt="Profile picture of a male teacher in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATNgY24EBVWWGNaoIiW3RZHER66AszozgpF3m2YX23uiuSr4a5nv19HAWRd103Ost28s4Ipm8XSOwm_P_O5ftwR4VL3Frj1PEl0KooRrDLQjrWuKcT3PdrJghO8n5TVYsAsp60qkHP1iKH41msUpwFyXCEgFmpiTLN70_B7O3eZiukBum3pi776KDTC5ixYTOSdIWS1rJoZle9OCb8egxnc5ijP8_bAvbfA79WcmyhYxTU8jBpoUMufv5ZZuwzWEWd2_oQmHJ1LQ"/>
+<div>
+<h2 class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">John Smith</h2>
+<div class="mt-1 flex items-center gap-1 text-sm text-text-light-secondary dark:text-text-dark-secondary">
+<span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span>4.8 (120)</span>
+</div>
+</div>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20">英会話</span>
+</div>
+<p class="whitespace-nowrap text-base font-semibold text-text-light-primary dark:text-text-dark-primary">¥5,000 <span class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">/ 時間</span></p>
+</div>
+</div>
+<!-- Teacher Profile Card 3 -->
+<div class="flex cursor-pointer flex-col gap-4 rounded-xl bg-card-light p-4 shadow-sm transition-shadow duration-200 hover:shadow-md dark:bg-card-dark">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<img class="h-16 w-16 rounded-full object-cover" data-alt="Profile picture of a young male teacher with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT01NRqxUquRM48FqzDA4UwT12nfFSHArNNxzTGD9mnLGy-HaZvdQrXVy24qcz8e9UNVtkEqP_YNe7L2W0Tnw91XXEWH8QRSdDjzvJZfo47E3Hkui6w8Wf_IDnWgVaDJgY6zIyIV2ld7-ZorOXLawnYHR4l--jJVnKpfafDtMlb5pa7u6yLhXqb9hZvngxjTjz-KBg4CnnQ4jvBlpChmxST_P1BTIRjVj2YI8r8dESnTjImHFEhEmh5eOEedgeWD7l8F8n4g6vzQ"/>
+<div>
+<h2 class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">鈴木 一郎</h2>
+<div class="mt-1 flex items-center gap-1 text-sm text-text-light-secondary dark:text-text-dark-secondary">
+<span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span>5.0 (25)</span>
+</div>
+</div>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20">プログラミング</span>
+</div>
+<p class="whitespace-nowrap text-base font-semibold text-text-light-primary dark:text-text-dark-primary">¥6,000 <span class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">/ 時間</span></p>
+</div>
+</div>
+<!-- Empty State Example -->
+<!-- <div class="flex flex-col items-center justify-center pt-24 text-center">
+                    <span class="material-symbols-outlined text-6xl text-text-light-secondary dark:text-text-dark-secondary">favorite</span>
+                    <h3 class="mt-4 text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">気になる先生をお気に入りに追加しましょう</h3>
+                    <p class="mt-1 text-sm text-text-light-secondary dark:text-text-dark-secondary">先生を探して、ハートアイコンをタップしてください。</p>
+                    <button class="mt-6 rounded-full bg-primary px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90">先生を探す</button>
+                </div> -->
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 z-10 flex h-20 shrink-0 border-t border-gray-200/80 bg-background-light/80 backdrop-blur-sm dark:border-gray-800/80 dark:bg-background-dark/80">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">ホーム</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">探す</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-bold">お気に入り</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs font-medium">メッセージ</span>
+</a>
+</footer>
+</div>
+</body></html>

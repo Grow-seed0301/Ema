@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>メールアドレスの変更</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "brand-blue": "#007AFF",
+              "brand-green": "#34C759",
+              "text-main-light": "#333333",
+              "text-sub-light": "#8E8E93",
+              "text-main-dark": "#F9F9F9",
+              "text-sub-dark": "#8E8E93",
+              "border-light": "#dbe0e6",
+              "border-dark": "#4a5568",
+              "error-red": "#FF3B30",
+              "white": "#FFFFFF",
+              "off-white": "#F9F9F9",
+            },
+            fontFamily: {
+              "display": ["Manrope", "Noto Sans JP", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply font-display bg-off-white text-text-main-light dark:bg-background-dark dark:text-text-main-dark;
+        }
+        .form-input {
+            @apply flex w-full min-w-0 flex-1 resize-none overflow-hidden text-base font-normal leading-normal h-14 p-4;
+            @apply bg-white dark:bg-background-dark border-border-light dark:border-border-dark;
+            @apply focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue;
+            @apply placeholder:text-text-sub-light dark:placeholder:text-text-sub-dark;
+        }
+        .icon-container {
+            @apply flex items-center justify-center bg-white dark:bg-background-dark border-y border-r border-border-light dark:border-border-dark text-text-sub-light dark:text-text-sub-dark pr-4;
+        }
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-off-white dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-off-white/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
+<button class="text-text-main-light dark:text-text-main-dark flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined !text-2xl">arrow_back</span>
+</button>
+<h1 class="text-text-main-light dark:text-text-main-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">メールアドレスの変更</h1>
+</header>
+<main class="flex flex-col flex-1 px-4 pt-6 pb-28">
+<!-- Body Text -->
+<p class="text-text-main-light dark:text-text-main-dark text-base font-normal leading-normal pb-6">新しいメールアドレスを入力し、本人確認のためにパスワードを入力してください。</p>
+<div class="flex flex-col gap-6">
+<!-- Current Email Field (Disabled) -->
+<div class="flex max-w-[480px] flex-col">
+<label class="flex flex-col flex-1">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-medium leading-normal pb-2">現在のメールアドレス</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg">
+<input class="form-input rounded-lg" disabled="" readonly="" value="current.user@example.com"/>
+</div>
+</label>
+</div>
+<!-- New Email Field -->
+<div class="flex max-w-[480px] flex-col">
+<label class="flex flex-col flex-1">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-medium leading-normal pb-2">新しいメールアドレス</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg shadow-sm">
+<input class="form-input rounded-l-lg" placeholder="新しいメールアドレスを入力" value=""/>
+<button aria-label="Clear input" class="icon-container rounded-r-lg">
+<span class="material-symbols-outlined !text-2xl">close</span>
+</button>
+</div>
+</label>
+</div>
+<!-- Password Field -->
+<div class="flex max-w-[480px] flex-col">
+<label class="flex flex-col flex-1">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-medium leading-normal pb-2">パスワード</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg shadow-sm">
+<input class="form-input rounded-l-lg" placeholder="パスワードを入力" type="password" value=""/>
+<button aria-label="Toggle password visibility" class="icon-container rounded-r-lg">
+<span class="material-symbols-outlined !text-2xl">visibility</span>
+</button>
+</div>
+</label>
+<!-- Error Message Example -->
+<p class="text-error-red text-sm mt-2">有効なメールアドレスを入力してください</p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Button -->
+<footer class="fixed bottom-0 left-0 w-full bg-off-white/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm border-t border-border-light/50 dark:border-border-dark/50">
+<div class="max-w-md mx-auto">
+<button class="flex w-full items-center justify-center rounded-lg bg-brand-blue h-14 text-white text-base font-bold leading-normal shadow-md hover:bg-brand-blue/90 active:scale-[0.98] transition-all duration-200">
+                    変更を保存する
+                </button>
+</div>
+</footer>
+</div>
+</body></html>

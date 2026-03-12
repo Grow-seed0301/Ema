@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>授業リクエスト一覧</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#339991",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#22262a",
+                        "accent-apricot": "#e5904d"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#121616] dark:text-white min-h-screen">
+<div class="max-w-[480px] mx-auto min-h-screen bg-background-light dark:bg-background-dark shadow-xl flex flex-col relative pb-24 overflow-hidden">
+<header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-12 pb-4 border-b border-transparent">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h1 class="text-xl font-bold tracking-tight">授業リクエスト</h1>
+</div>
+<button class="size-10 rounded-full bg-white dark:bg-zinc-800 shadow-sm flex items-center justify-center border border-zinc-100 dark:border-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300">tune</span>
+</button>
+</div>
+</header>
+<nav class="px-6 mb-2">
+<div class="flex border-b border-zinc-200 dark:border-zinc-700">
+<a class="flex-1 text-center py-3 border-b-2 border-primary text-primary font-bold text-sm" href="#">
+                未承認 <span class="ml-1 text-[10px] bg-primary/10 px-1.5 py-0.5 rounded-full">3</span>
+</a>
+<a class="flex-1 text-center py-3 border-b-2 border-transparent text-zinc-500 dark:text-zinc-400 font-medium text-sm" href="#">
+                承認済み
+            </a>
+<a class="flex-1 text-center py-3 border-b-2 border-transparent text-zinc-500 dark:text-zinc-400 font-medium text-sm" href="#">
+                履歴
+            </a>
+</div>
+</nav>
+<main class="flex-1 p-6 space-y-6">
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">新着 (3件)</h2>
+<span class="text-xs text-zinc-400 font-medium">最終更新: 14:32</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-zinc-100 dark:border-zinc-800 mb-6">
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full overflow-hidden border-2 border-primary/20 bg-zinc-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAc4Oj8A8NPexIWpxE8lVHUL_vAPGpGhmDWuQndxhxhKkMswEFq1_xwpEUcLd5bylAQfudlVhpTT95ofV8ZQv53qoEJbONL7KQaq02nnmrrzqFl_0JkL1JqNKp96x51VILCScWVxMcwdcKccN1B4F9P7FeImU2rGokhUO5YInTWWp27lCfK6MAuyJPv7ASAKpZj9YKIzqMHTV_uoawm0iu-Qp9n71kpB-ewLusac_TMpDkYkTQhti4zac7GxXZ9N6AU618Z25q8Qg'); background-size: cover;"></div>
+<div>
+<p class="font-bold text-base">田中 健太</p>
+<span class="text-[10px] text-accent-apricot font-bold uppercase tracking-wider">High Priority</span>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/20 px-3 py-1 rounded-full">
+<span class="text-primary text-xs font-bold">数学 (微積分)</span>
+</div>
+</div>
+<div class="space-y-3 mb-5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-zinc-400 text-sm mt-0.5">calendar_today</span>
+<p class="text-sm font-medium text-zinc-700 dark:text-zinc-300">10月25日 (金) 18:00 〜 19:30</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-zinc-400 text-sm mt-0.5">chat_bubble</span>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed italic">
+                                「中間テスト対策をお願いしたいです。特に微分積分が苦手なので、基礎から重点的に教えていただきたいです。」
+                            </p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex gap-2">
+<button class="flex-1 h-11 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-sm font-bold text-zinc-500 dark:text-zinc-400 flex items-center justify-center gap-1 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-lg">close</span>
+                                お断りする
+                            </button>
+<button class="flex-[1.5] h-11 rounded-xl bg-primary text-white text-sm font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/10 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                                リクエストを承認
+                            </button>
+</div>
+<button class="w-full h-10 text-xs font-bold text-zinc-400 dark:text-zinc-500 flex items-center justify-center gap-1 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors">
+                            詳細を確認
+                            <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white/95 dark:bg-zinc-900/95 backdrop-blur-lg border-t border-zinc-200 dark:border-zinc-800 h-20 pb-4 px-8 flex items-center justify-between z-40">
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">ホーム</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">pending_actions</span>
+<span class="text-[10px] font-bold">リクエスト</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400 relative">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[10px] font-medium">メッセージ</span>
+<div class="absolute top-0 right-1 size-2 bg-accent-apricot rounded-full border border-white dark:border-zinc-900"></div>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">マイページ</span>
+</button>
+</footer>
+<div class="fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-4 modal-overlay">
+<div class="w-full max-w-[400px] bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl overflow-hidden animate-in slide-in-from-bottom duration-300">
+<div class="px-6 pt-8 pb-6">
+<div class="flex items-center justify-center mb-6">
+<div class="size-12 rounded-full bg-red-50 dark:bg-red-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500">cancel</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-center mb-6">お断り理由を選択</h3>
+<form class="space-y-4">
+<div class="space-y-2">
+<label class="flex items-center p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 cursor-pointer hover:border-primary/30 transition-colors">
+<input checked="" class="size-5 text-primary border-zinc-300 focus:ring-primary dark:bg-zinc-700 dark:border-zinc-600" name="reason" type="radio"/>
+<span class="ml-3 text-sm font-medium">スケジュールの都合</span>
+</label>
+<label class="flex items-center p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 cursor-pointer hover:border-primary/30 transition-colors">
+<input class="size-5 text-primary border-zinc-300 focus:ring-primary dark:bg-zinc-700 dark:border-zinc-600" name="reason" type="radio"/>
+<span class="ml-3 text-sm font-medium">科目対象外</span>
+</label>
+<label class="flex items-center p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 cursor-pointer hover:border-primary/30 transition-colors">
+<input class="size-5 text-primary border-zinc-300 focus:ring-primary dark:bg-zinc-700 dark:border-zinc-600" name="reason" type="radio"/>
+<span class="ml-3 text-sm font-medium">その他</span>
+</label>
+</div>
+<div class="mt-4">
+<label class="block text-xs font-bold text-zinc-400 mb-2 uppercase tracking-wider">生徒への説明 (任意)</label>
+<textarea class="w-full rounded-xl border-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 text-sm focus:border-primary focus:ring-primary placeholder:text-zinc-400" placeholder="丁寧な理由を添えると、次回の依頼に繋がりやすくなります" rows="3"></textarea>
+</div>
+<div class="pt-4 space-y-3">
+<button class="w-full h-12 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-red-500/20" type="button">
+                            送信してお断りする
+                        </button>
+<button class="w-full h-12 bg-transparent text-zinc-500 dark:text-zinc-400 font-bold rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" type="button">
+                            キャンセル
+                        </button>
+</div>
+</form>
+</div>
+<div class="h-1.5 w-12 bg-zinc-300 dark:bg-zinc-700 rounded-full mx-auto mb-2 opacity-50"></div>
+</div>
+</div>
+</div>
+
+</body></html>
